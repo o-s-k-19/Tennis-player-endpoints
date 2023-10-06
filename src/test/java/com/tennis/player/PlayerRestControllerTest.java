@@ -28,9 +28,9 @@ class PlayerRestControllerTest {
 
 		mockMvc.perform(get(PLAYER_ENDPOINT)).andExpect(status().isOk())
 				.andExpect(MockMvcResultMatchers.content().contentType("application/hal+json"))
-				.andExpect(jsonPath("$.response._embedded.playerDTOes[0].id", is(5)))
-				.andExpect(jsonPath("$.response._embedded.playerDTOes[1].id", is(1)))
-				.andExpect(jsonPath("$.response._embedded.playerDTOes[2].id", is(4)));
+				.andExpect(jsonPath("$.response._embedded.playerDTOList[0].id", is(5)))
+				.andExpect(jsonPath("$.response._embedded.playerDTOList[1].id", is(1)))
+				.andExpect(jsonPath("$.response._embedded.playerDTOList[2].id", is(4)));
 
 	}
 
